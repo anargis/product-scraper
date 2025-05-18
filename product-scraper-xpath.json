@@ -1,0 +1,52 @@
+{
+  "Products": {
+    "Elements": [
+      {
+        "Name": "Title",
+        "Xpaths": [
+          "//h1/a",
+          "//h2/a",
+          "//h3/a",
+          "//h4/a",
+          "//h5/a",
+          "//a",
+          "//a/h1",
+          "//a/h2",
+          "//a/h3",
+          "//a/h4",
+          "//a/h5",
+          "//h1",
+          "//h2",
+          "//h3",
+          "//h4",
+          "//h5"
+        ]
+      },
+      {
+        "Name": "Price",
+        "Xpaths": [
+          "//p[@class='price']",
+          "//span[@class='price']",
+          "//span[contains(@class, 'woocommerce-Price-amount')]",
+          "//div[@class='product-price']",
+          "//p[@class='price-color']",
+          "//div[@class='product_price']/p[@class='price_color']"
+        ]
+      },
+      {
+        "Name": "Images",
+        "Xpaths":[
+          "//a/img",
+          "//a/div/img"
+        ]
+      },
+      {
+        "Name": "Xpaths",
+        "Xpaths": [
+          "//li[@class='next']/a",
+          "//li[@class='pagination-next']/a"
+        ]
+      }
+    ]
+  }
+}
