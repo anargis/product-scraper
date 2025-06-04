@@ -10,10 +10,8 @@ try:
     from selenium.webdriver.chrome.options import Options
     from selenium.common.exceptions import NoSuchElementException
 except ImportError as e:
-    print(f"Missing required module.")
-    print("Please install it using pip:")
-    print(f"pip install requests selenium")
-    exit(1)
+    print("Missing required module. Please install it via: pip install requests selenium")
+    print(f"Error: {e}")
 
 class ScrapProductsElements:
 
@@ -124,7 +122,6 @@ class ScrapProductsElements:
         
         print(f"Scraped {product_count} items so far...")
 
-
         with open(self.filename, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow(headers)
@@ -163,8 +160,6 @@ class ScrapProductsElements:
         self.driver.quit()
         print(f"\nScraping completed. Data saved to '{self.filename}'. Found {product_count} product(s).")
 
-
-    # All functions in one
     def run(self):
         self.welcome_msg()
         if not self.check_url():

@@ -40,7 +40,7 @@ pip3
 ```
 #### Navigate to your project directory, e.g.:
 ```
-cd Projects/py-automation-scripts
+cd Projects/product-scraper
 ```
 #### Create a virtual environment
 ```
@@ -89,7 +89,7 @@ export PS1='\u@\h:\w\$ '
 
 3. **Add or update XPath entries**:
    - Open the `product-scraper-xpath.json` file.
-   - Under the appropriate section (`Title`, `Price`, `Images` or `Next pagination`), add the new XPath(s) that correctly point to the elements you inspected.
+   - Under the appropriate section (`Title`, `Price`, `Images` or `Next pagination`), add your own new XPath(s) that correctly point to the elements you inspected.
    - For example, if the price is located inside the following HTML structure:
      - `div` with class `product_price`
      - `p` tag with class `price_color`
@@ -103,5 +103,8 @@ export PS1='\u@\h:\w\$ '
 
 4. **Run the scraper**:
    - Execute the script.
+   ```
+   python3 product-scraper.py
+   ```
    - It will use the XPaths in `product-scraper-xpath.json` to find and extract the product data.
    - The output will be saved to a CSV file as specified.
